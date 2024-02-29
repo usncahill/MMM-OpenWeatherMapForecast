@@ -414,17 +414,35 @@ Module.register("MMM-OpenWeatherMapForecast", {
         if (snowAccumulation) {
             accumulationtype = "snow";
             if (typeof snowAccumulation === "number") {
-                accumulation = Math.round(snowAccumulation) + " " + this.getUnit("accumulationSnow");
+                if (this.getUnit("accumulationSnow") === "in") {
+                    accumulation = Math.round(snowAccumulation*100/25.4)/100;
+                } else {
+                    accumulation = Math.round(snowAccumulation);
+                }
             } else if (typeof snowAccumulation === "object" && snowAccumulation["1h"]) {
-                accumulation = Math.round(snowAccumulation["1h"]) + " " + this.getUnit("accumulationSnow");
+                if (this.getUnit("accumulationSnow") === "in") {
+                    accumulation = Math.round(snowAccumulation["1h"]*100/25.4)/100;
+                } else {
+                    accumulation = Math.round(snowAccumulation["1h"]);
+                }
             }
+            accumulation = accumulation + " " + this.getUnit("accumulationSnow");
         } else if (rainAccumulation) {
             accumulationtype = "rain";
             if (typeof rainAccumulation === "number") {
-                accumulation = Math.round(rainAccumulation) + " " + this.getUnit("accumulationRain");
+                if (this.getUnit("accumulationRain") === "in") {
+                    accumulation = Math.round(rainAccumulation*100/25.4)/100;
+                } else {
+                    accumulation = Math.round(rainAccumulation);
+                }
             } else if (typeof rainAccumulation === "object" && rainAccumulation["1h"]) {
-                accumulation = Math.round(rainAccumulation["1h"]) + " " + this.getUnit("accumulationRain");
+                if (this.getUnit("accumulationRain") === "in") {
+                    accumulation = Math.round(rainAccumulation["1h"]*100/25.4)/100;
+                } else {
+                    accumulation = Math.round(rainAccumulation["1h"]);
+                }
             }
+            accumulation = accumulation + " " + this.getUnit("accumulationRain");
         }
 
         if (percentChance) {
@@ -477,12 +495,12 @@ Module.register("MMM-OpenWeatherMapForecast", {
      */
     units: {
         accumulationRain: {
-            imperial: "mm",
+            imperial: "in",
             metric: "mm",
             "": "mm"
         },
         accumulationSnow: {
-            imperial: "mm",
+            imperial: "in",
             metric: "mm",
             "": "mm"
         },
