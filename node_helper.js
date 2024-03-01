@@ -58,6 +58,7 @@ module.exports = NodeHelper.create({
                         var resp = body; //needle automagically parses the response as JSON
                         resp.instanceId = payload.instanceId;
                         self.sendSocketNotification("OPENWEATHER_ONE_CALL_FORECAST_DATA", resp);
+                        self.sendSocketNotification("WEATHER_UPDATED", resp);
 
                     } else {
                         console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** " + error);
