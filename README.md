@@ -1,8 +1,8 @@
 # MMM-OpenWeatherMapForecast
 
-This a module for <strong>MagicMirror</strong><br>
+This a module for <strong>MagicMirror²</strong><br>
 https://magicmirror.builders/<br>
-https://github.com/MichMich/MagicMirror
+https://github.com/MagicMirrorOrg/MagicMirror
 
 ![Screenshot](/screenshots/MMM-OpenWeatherMapForecast.png?raw=true "Screenshot")
 
