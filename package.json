@@ -7,10 +7,10 @@
         "url": "git+https://github.com/MarcLandis/MMM-OpenWeatherMapForecast"
     },
     "keywords": [
-    "MagicMirror",
-    "Weather",
-    "OpenWeatherMap",
-    "Forecast",
+        "MagicMirror",
+        "Weather",
+        "OpenWeatherMap",
+        "Forecast",
     ],
     "main": "MMM-OpenWeatherMapForecast.js",
     "scripts": {
