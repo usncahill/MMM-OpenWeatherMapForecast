@@ -6,6 +6,12 @@
         "type": "git",
         "url": "git+https://github.com/MarcLandis/MMM-OpenWeatherMapForecast"
     },
+    "keywords": [
+    "MagicMirror",
+    "Weather",
+    "OpenWeatherMap",
+    "Forecast",
+    ],
     "main": "MMM-OpenWeatherMapForecast.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
