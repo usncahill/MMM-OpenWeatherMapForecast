@@ -1,6 +1,6 @@
 /*********************************
 
-  Magic Mirror Module:
+  MagicMirror² Module:
   MMM-OpenWeatherMapForecast
   https://github.com/MarcLandis/MMM-OpenWeatherMapForecast
 

@@ -1,11 +1,18 @@
 {
     "name": "mmm-openweathermapforecast",
     "version": "1.0.0",
-    "description": "Magic Mirror module that gets weather forecast data from OpenWeatherMap",
+    "description": "MagicMirror² module that gets weather forecast data from OpenWeatherMap",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/MarcLandis/MMM-OpenWeatherMapForecast"
     },
+    "keywords": [
+        "MagicMirror",
+        "MagicMirror²",
+        "Weather",
+        "OpenWeatherMap",
+        "Forecast",
+    ],
     "main": "MMM-OpenWeatherMapForecast.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
