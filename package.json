@@ -11,7 +11,7 @@
         "MagicMirror²",
         "Weather",
         "OpenWeatherMap",
-        "Forecast",
+        "Forecast"
     ],
     "main": "MMM-OpenWeatherMapForecast.js",
     "scripts": {
