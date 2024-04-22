@@ -1,8 +1,8 @@
 # MMM-OpenWeatherMapForecast
 
-This a module for <strong>MagicMirror</strong><br>
+This a module for <strong>MagicMirror²</strong><br>
 https://magicmirror.builders/<br>
-https://github.com/MichMich/MagicMirror
+https://github.com/MagicMirrorOrg/MagicMirror
 
 ![Screenshot](/screenshots/MMM-OpenWeatherMapForecast.png?raw=true "Screenshot")
 
@@ -184,7 +184,7 @@ Find out your latitude and longitude here:
 
 ## Sample Configuration
 
-```
+```js
 {
   module: "MMM-OpenWeatherMapForecast",
   header: "Weather",
@@ -216,7 +216,7 @@ Find out your latitude and longitude here:
 
 This module is set to be 300px wide by default.  If you wish to override it, you can add the following to your `custom.css` file:
 
-```
+```css
 .MMM-OpenWeatherMapForecast .module-content {
   width: 500px; /* adjust this to taste */
 }
