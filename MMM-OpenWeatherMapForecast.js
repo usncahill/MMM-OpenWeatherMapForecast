@@ -56,7 +56,7 @@ Module.register("MMM-OpenWeatherMapForecast", {
         apikey: "",
         latitude: "",
         longitude: "",
-        endpoint: "https://api.openweathermap.org/data/2.5/onecall",
+        endpoint: "https://api.openweathermap.org/data/3.0/onecall",
         updateInterval: 10, // minutes
         requestDelay: 0,
         units: config.units,
