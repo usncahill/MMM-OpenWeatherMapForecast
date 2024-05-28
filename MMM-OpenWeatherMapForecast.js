@@ -77,7 +77,6 @@ Module.register("MMM-OpenWeatherMapForecast", {
         showFeelsLike: true,
         language: config.language,
         iconset: "1c",
-        mainIconset: defaults.iconset,
         useAnimatedIcons: true,
         animateMainIconOnly: true,
         colored: true,
