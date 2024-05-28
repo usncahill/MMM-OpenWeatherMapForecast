@@ -51,7 +51,7 @@ Find out your latitude and longitude here:
   <tbody>
     <tr>
       <td><code>endpoint</code></td>
-      <td>The URL of the onecall api; v2.5 is free, v3.0 requires a subscription with payment info and can be used with <code>https://api.openweathermap.org/data/3.0/onecall</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to <code>https://api.openweathermap.org/data/2.5/onecall</code></td>
+      <td>The URL of the onecall api; v2.5 is free, v3.0 requires a subscription with payment info and can be used with <code>https://api.openweathermap.org/data/3.0/onecall</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to <code>https://api.openweathermap.org/data/3.0/onecall</code></td>
     </tr>
     <tr>
       <td><code>updateInterval</code></td>
