@@ -60,7 +60,7 @@ module.exports = NodeHelper.create({
                         self.sendSocketNotification("OPENWEATHER_ONE_CALL_FORECAST_DATA", resp);
 
                     } else {
-                        console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** " + error);
+                        console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** " + response.statusCode);
                     }
 
                 });
