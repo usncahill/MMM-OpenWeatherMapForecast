@@ -15,7 +15,7 @@
 
   The DarkSky-compatible API request looks like this:
 
-    https://api.openweathermap.org/data/2.5/onecall?lat=LATITUDE&lon=LONGITUDE&units=XXX&lang=YY&appid=API_KEY
+    https://api.openweathermap.org/data/3.0/onecall?lat=LATITUDE&lon=LONGITUDE&units=XXX&lang=YY&appid=API_KEY
 
 *********************************/
 
