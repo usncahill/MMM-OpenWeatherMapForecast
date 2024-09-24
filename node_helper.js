@@ -19,6 +19,7 @@
 
 *********************************/
 
+const Log = require("logger");
 var NodeHelper = require("node_helper");
 var needle = require("needle");
 var moment = require("moment");
@@ -26,7 +27,7 @@ var moment = require("moment");
 module.exports = NodeHelper.create({
 
     start: function() {
-        console.log("====================== Starting node_helper for module [" + this.name + "]");
+        Log.log("====================== Starting node_helper for module [" + this.name + "]");
     },
 
     socketNotificationReceived: function(notification, payload) {
@@ -35,9 +36,9 @@ module.exports = NodeHelper.create({
             var self = this;
 
             if (payload.apikey == null || payload.apikey == "") {
-                console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** No API key configured. Get an API key at https://openweathermap.org/api/one-call-api");
+                Log.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** No API key configured. Get an API key at https://openweathermap.org/api/one-call-api");
             } else if (payload.latitude == null || payload.latitude == "" || payload.longitude == null || payload.longitude == "") {
-                console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** Latitude and/or longitude not provided.");
+                Log.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** Latitude and/or longitude not provided.");
             } else {
 
                 //make request to OpenWeather onecall API
@@ -49,7 +50,7 @@ module.exports = NodeHelper.create({
                     "&lang=" + payload.language;
                 // "&exclude=minutely"
 
-                // console.log("[MMM-OpenWeatherMapForecast] Getting data: " + url);
+                // Log.log("[MMM-OpenWeatherMapForecast] Getting data: " + url);
                 needle.get(url, function(error, response, body) {
 
                     if (!error && response.statusCode == 200) {
@@ -60,7 +61,7 @@ module.exports = NodeHelper.create({
                         self.sendSocketNotification("OPENWEATHER_ONE_CALL_FORECAST_DATA", resp);
 
                     } else {
-                        console.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** " + response.statusCode);
+                        Log.log("[MMM-OpenWeatherMapForecast] " + moment().format("D-MMM-YY HH:mm") + " ** ERROR ** " + response.statusCode);
                     }
 
                 });
