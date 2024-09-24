@@ -67,7 +67,7 @@ Find out your latitude and longitude here:
     </tr>
     <tr>
       <td><code>language</code></td>
-      <td>The language to be used for display.<br><br><strong>Type</strong> <code>String</code><br>Defaults to the language set for Magic Mirror, but can be overridden with any of the language codes listed here: https://openweathermap.org/api/one-call-api#multi.</td>
+      <td>The language to be used for display.<br><br><strong>Type</strong> <code>String</code><br>Defaults to the language set for MagicMirror, but can be overridden with any of the language codes listed here: https://openweathermap.org/api/one-call-api#multi.</td>
     </tr>
     <tr>
       <td><code>colored</code></td>
@@ -75,7 +75,7 @@ Find out your latitude and longitude here:
     </tr>
     <tr>
       <td><code>units</code></td>
-      <td>One of the following: <code>imperial</code>, <code>metric</code>, or <code>[blank]</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to units set for Magic Mirror.<br />See https://openweathermap.org/api/one-call-api#data for details on units.</td>
+      <td>One of the following: <code>imperial</code>, <code>metric</code>, or <code>[blank]</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to units set for MagicMirror.<br />See https://openweathermap.org/api/one-call-api#data for details on units.</td>
     </tr>
     <tr>
       <td><code>showCurrentConditions</code></td>
