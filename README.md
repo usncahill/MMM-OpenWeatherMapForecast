@@ -14,14 +14,38 @@ much of the same functionality.
 
 **NOTE:** This module uses the Nunjucks templating system introduced in version 2.2.0 of MagicMirror.  If you're seeing nothing on your display where you expect this module to appear, make sure your MagicMirror version is at least 2.2.0.
 
-
 ## Installation
 
-1. Navigate into your MagicMirror `modules` folder and execute<br>
-`git clone https://github.com/MarcLandis/MMM-OpenWeatherMapForecast.git`.
-2. Enter the new `MMM-OpenWeatherMapForecast` directory and execute `npm install`.
+1\. Execute the following commands to install the module:
 
+```bash
+cd ~/MagicMirror/modules # navigate to module folder
+git clone https://github.com/MarcLandis/MMM-OpenWeatherMapForecast # clone this repository
+cd MMM-OpenWeatherMapForecast
+npm install # install dependencies
+```
 
+2\. Then, add the following into the `modules` section of your `config/config.js` file:
+
+```javascript
+{
+    module: 'MMM-OpenWeatherMapForecast',
+    position: 'top_left',
+    config: {
+        // See 'Configuration' for more information.
+    }
+},
+```
+
+## Update
+
+Execute the following commands to install the module:
+
+```bash
+cd ~/MagicMirror/modules/MMM-OpenWeatherMapForecast
+git pull
+npm install
+```
 
 ## Configuration
 
@@ -67,7 +91,7 @@ Find out your latitude and longitude here:
     </tr>
     <tr>
       <td><code>language</code></td>
-      <td>The language to be used for display.<br><br><strong>Type</strong> <code>String</code><br>Defaults to the language set for Magic Mirror, but can be overridden with any of the language codes listed here: https://openweathermap.org/api/one-call-api#multi.</td>
+      <td>The language to be used for display.<br><br><strong>Type</strong> <code>String</code><br>Defaults to the language set for MagicMirror², but can be overridden with any of the language codes listed here: https://openweathermap.org/api/one-call-api#multi.</td>
     </tr>
     <tr>
       <td><code>colored</code></td>
@@ -75,7 +99,7 @@ Find out your latitude and longitude here:
     </tr>
     <tr>
       <td><code>units</code></td>
-      <td>One of the following: <code>imperial</code>, <code>metric</code>, or <code>[blank]</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to units set for Magic Mirror.<br />See https://openweathermap.org/api/one-call-api#data for details on units.</td>
+      <td>One of the following: <code>imperial</code>, <code>metric</code>, or <code>[blank]</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to units set for MagicMirror².<br />See https://openweathermap.org/api/one-call-api#data for details on units.</td>
     </tr>
     <tr>
       <td><code>showCurrentConditions</code></td>
