@@ -1,14 +1,10 @@
 # MMM-OpenWeatherMapForecast
 
-This a module for <strong>MagicMirror²</strong><br>
-https://magicmirror.builders/<br>
-https://github.com/MagicMirrorOrg/MagicMirror
+This a module for [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror).
 
-![Screenshot](/screenshots/MMM-OpenWeatherMapForecast.png?raw=true "Screenshot")
+![Screenshot](/screenshots/MMM-OpenWeatherMapForecast.png)
 
-A weather module that displays current, hourly and daily forecast information
-using data from the OpenWeather One Call API. This is a replacement module for MMM-MyWeather, now that Weather Underground no longer allows free API access.  This a complete rewrite from scratch but maintains
-much of the same functionality.
+A weather module that displays current, hourly and daily forecast information using data from the OpenWeather One Call API. This is a replacement module for MMM-MyWeather, now that Weather Underground no longer allows free API access. This a complete rewrite from scratch but maintains much of the same functionality.
 
 [gerjomarty](https://github.com/gerjomarty) reworked the module to use OpenWeatherMap after Dark Sky no longer accepts free API access.
 
@@ -75,7 +71,7 @@ Find out your latitude and longitude here:
   <tbody>
     <tr>
       <td><code>endpoint</code></td>
-      <td>The URL of the onecall api; v2.5 is free, v3.0 requires a subscription with payment info and can be used with <code>https://api.openweathermap.org/data/3.0/onecall</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to <code>https://api.openweathermap.org/data/3.0/onecall</code></td>
+      <td>The URL of the onecall api; v2.5 is free but deprecated, v3.0 requires a subscription with payment info and can be used with <code>https://api.openweathermap.org/data/3.0/onecall</code>.<br><br><strong>Type</strong> <code>String</code><br>Defaults to <code>https://api.openweathermap.org/data/3.0/onecall</code></td>
     </tr>
     <tr>
       <td><code>updateInterval</code></td>
@@ -202,43 +198,39 @@ Find out your latitude and longitude here:
       <td>How you would like wind direction to be displayed.  Assumes index <code>0</code> is North and proceeds clockwise.<br><br><strong>Type</strong> <code>Array of Strings</code><br>Defaults to <code>["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]</code></td>
     </tr>
 
-
   </tbody>
 </table>
 
 ## Sample Configuration
 
 ```js
-{
-  module: "MMM-OpenWeatherMapForecast",
-  header: "Weather",
-  position: "top_right",
-  classes: "default everyone",
-  disabled: false,
-  config: {
-    apikey: "SUPER SECRET!!!",
-    latitude: "51.506130",
-    longitude: "-0.090270",      
-    iconset: "4c",
-    concise: false,
-    forecastLayout: "table"
-  }
-},
+    {
+      module: "MMM-OpenWeatherMapForecast",
+      header: "Weather",
+      position: "top_right",
+      classes: "default everyone",
+      config: {
+        apikey: "SUPER SECRET!!!",
+        latitude: "51.506130",
+        longitude: "-0.090270",      
+        iconset: "4c",
+        concise: false,
+        forecastLayout: "table"
+      }
+    },
 ```
 
 ## Icon Sets
 
-![Icon Sets](icons/iconsets.gif?raw=true "Icon Sets")
-
+![Icon Sets](icons/iconsets.gif)
 
 ## Layouts
 
-![Layouts](/screenshots/forecast-layouts.png?raw=true "Layouts")
-
+![Layouts](/screenshots/forecast-layouts.png)
 
 ## Styling
 
-This module is set to be 300px wide by default.  If you wish to override it, you can add the following to your `custom.css` file:
+This module is set to be 300px wide by default. If you wish to override it, you can add the following to your `custom.css` file:
 
 ```css
 .MMM-OpenWeatherMapForecast .module-content {
@@ -248,39 +240,36 @@ This module is set to be 300px wide by default.  If you wish to override it, you
 
 Most important elements of this module have one or more class names applied. Examine the `MMM-OpenWeatherMapForecast.css` or inspect elements directly with your browser of choice to determine what class you would like to override.
 
-
 ## For Module Developers
 
-This module broadcasts a notification when it recieves a weather update.  The notification is `OPENWEATHER_ONE_CALL_FORECAST_DATA` and the payload contains OpenWeatherMap's JSON weather forecast object.  For details on the weather object, see https://openweathermap.org/api/one-call-api.
-
+This module broadcasts a notification when it recieves a weather update.  The notification is `OPENWEATHER_ONE_CALL_FORECAST_DATA` and the payload contains OpenWeatherMap's JSON weather forecast object.  For details on the weather object, see <https://openweathermap.org/api/one-call-api>.
 
 ## Attributions
 
 **Skycons - Animated icon set by Dark Sky**<br />
-http://darkskyapp.github.io/skycons/<br />
+<http://darkskyapp.github.io/skycons/><br />
 (using the fork created by Maxime Warner
 that allows individual details of the icons
 to be coloured<br />
-https://github.com/maxdow/skycons)
+<https://github.com/maxdow/skycons>)
 
 **Climacons by Adam Whitcroft**<br />
-http://adamwhitcroft.com/climacons/
+<http://adamwhitcroft.com/climacons/>
 
 **Free Weather Icons by Svilen Petrov**<br />
-https://www.behance.net/gallery/12410195/Free-Weather-Icons
+<https://www.behance.net/gallery/12410195/Free-Weather-Icons>
 
 **Weather Icons by Thom**<br />
 (Designed for DuckDuckGo)<br />
-https://dribbble.com/shots/1832162-Weather-Icons
+<https://dribbble.com/shots/1832162-Weather-Icons>
 
 Sets 4 and 5 were found on Graphberry, but I couldn't find
 the original artists.<br />
-https://www.graphberry.com/item/weather-icons<br />
-https://www.graphberry.com/item/weathera-weather-forecast-icons
+<https://www.graphberry.com/item/weather-icons><br />
+<https://www.graphberry.com/item/weathera-weather-forecast-icons>
 
 Some of the icons were modified to better work with the module's
 structure and aesthetic.
 
 **Weather data provided by OpenWeather**<br />
-https://openweathermap.org
-
+<https://openweathermap.org>
