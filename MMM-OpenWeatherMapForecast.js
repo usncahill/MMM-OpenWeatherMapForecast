@@ -1,6 +1,6 @@
 /*********************************
 
-  MagicMirror² Module:
+  Magic Mirror Module:
   MMM-OpenWeatherMapForecast
   https://github.com/MarcLandis/MMM-OpenWeatherMapForecast
 
@@ -44,13 +44,18 @@
 
 Module.register("MMM-OpenWeatherMapForecast", {
 
+    /*
+      This module uses the Nunjucks templating system introduced in
+      version 2.2.0 of MagicMirror.  If you're seeing nothing on your
+      display where you expect this module to appear, make sure your
+      MagicMirror version is at least 2.2.0.
+    */
     requiresVersion: "2.2.0",
 
     defaults: {
         apikey: "",
         latitude: "",
         longitude: "",
-        endpoint: "https://api.openweathermap.org/data/3.0/onecall",
         updateInterval: 10, // minutes
         requestDelay: 0,
         units: config.units,
@@ -71,6 +76,7 @@ Module.register("MMM-OpenWeatherMapForecast", {
         showFeelsLike: true,
         language: config.language,
         iconset: "1c",
+        mainIconset: defaults.iconset,
         useAnimatedIcons: true,
         animateMainIconOnly: true,
         colored: true,
@@ -219,8 +225,7 @@ Module.register("MMM-OpenWeatherMapForecast", {
             units: this.config.units,
             language: this.config.language,
             instanceId: this.identifier,
-            requestDelay: this.config.requestDelay,
-            endpoint: this.config.endpoint
+            requestDelay: this.config.requestDelay
         });
 
     },
@@ -407,35 +412,17 @@ Module.register("MMM-OpenWeatherMapForecast", {
         if (snowAccumulation) {
             accumulationtype = "snow";
             if (typeof snowAccumulation === "number") {
-                if (this.getUnit("accumulationSnow") === "in") {
-                    accumulation = Math.round(snowAccumulation*100/25.4)/100;
-                } else {
-                    accumulation = Math.round(snowAccumulation);
-                }
+                accumulation = Math.round(snowAccumulation) + " " + this.getUnit("accumulationSnow");
             } else if (typeof snowAccumulation === "object" && snowAccumulation["1h"]) {
-                if (this.getUnit("accumulationSnow") === "in") {
-                    accumulation = Math.round(snowAccumulation["1h"]*100/25.4)/100;
-                } else {
-                    accumulation = Math.round(snowAccumulation["1h"]);
-                }
+                accumulation = Math.round(snowAccumulation["1h"]) + " " + this.getUnit("accumulationSnow");
             }
-            accumulation = accumulation + " " + this.getUnit("accumulationSnow");
         } else if (rainAccumulation) {
             accumulationtype = "rain";
             if (typeof rainAccumulation === "number") {
-                if (this.getUnit("accumulationRain") === "in") {
-                    accumulation = Math.round(rainAccumulation*100/25.4)/100;
-                } else {
-                    accumulation = Math.round(rainAccumulation);
-                }
+                accumulation = Math.round(rainAccumulation) + " " + this.getUnit("accumulationRain");
             } else if (typeof rainAccumulation === "object" && rainAccumulation["1h"]) {
-                if (this.getUnit("accumulationRain") === "in") {
-                    accumulation = Math.round(rainAccumulation["1h"]*100/25.4)/100;
-                } else {
-                    accumulation = Math.round(rainAccumulation["1h"]);
-                }
+                accumulation = Math.round(rainAccumulation["1h"]) + " " + this.getUnit("accumulationRain");
             }
-            accumulation = accumulation + " " + this.getUnit("accumulationRain");
         }
 
         if (percentChance) {
@@ -488,12 +475,12 @@ Module.register("MMM-OpenWeatherMapForecast", {
      */
     units: {
         accumulationRain: {
-            imperial: "in",
+            imperial: "mm",
             metric: "mm",
             "": "mm"
         },
         accumulationSnow: {
-            imperial: "in",
+            imperial: "mm",
             metric: "mm",
             "": "mm"
         },

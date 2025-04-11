@@ -1,28 +1,37 @@
+.MMM-OpenWeatherMapForecast > header {
+    margin-top: 10px;
+    font-size: 32px;
+}
+
 .MMM-OpenWeatherMapForecast * {
     box-sizing: border-box;
 }
 
 .MMM-OpenWeatherMapForecast .module-content {
-    width: 300px;
+    width: 500px;
 }
 
 .MMM-OpenWeatherMapForecast .forecast-container .forecast-item .temperature,
 .MMM-OpenWeatherMapForecast .forecast-container .forecast-item .temperature-container {
+    font-size: 40px;
     color: #FFFFFF;
 }
 
 .MMM-OpenWeatherMapForecast .temperature .low-temperature,
 .MMM-OpenWeatherMapForecast .temperature-container .low-temperature {
+    font-size: 40px;
     color: #AAA;
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.colored .temperature .high-temperature,
 .MMM-OpenWeatherMapForecast .wrapper.colored .temperature-container .high-temperature {
+    font-size: 40px;
     color: #F8DD70;
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.colored .temperature .low-temperature,
 .MMM-OpenWeatherMapForecast .wrapper.colored .temperature-container .low-temperature {
+    font-size: 40px;
     color: #6FC4F5;
 }
 
@@ -31,8 +40,8 @@
 }
 
 .MMM-OpenWeatherMapForecast .attribution {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 40px;
+    line-height: 50px;
     color: #333;
     text-align: right;
 }
@@ -41,21 +50,23 @@
 /* Current Conditions */
 
 .MMM-OpenWeatherMapForecast .current-conditions-wrapper .current.temperature {
-    line-height: 80px;
+    font-size: 80px;
+    line-height: 100px;
     vertical-align: middle;
 }
 
 .MMM-OpenWeatherMapForecast .current-conditions-wrapper .current.feelslike {
-    line-height: 80px;
+    font-size: 40px;
+    line-height: 100px;
     vertical-align: bottom;
 }
 
 .MMM-OpenWeatherMapForecast .current-conditions-wrapper .icon {
     vertical-align: middle;
-    line-height: 80px;
+    line-height: 240px;
     margin-right: 20px;
-    width: 100px;
-    height: 100px;
+    width: 240px;
+    height: 240px;
     display: inline-block;
     position: relative;
 }
@@ -74,8 +85,8 @@
 .MMM-OpenWeatherMapForecast .inline-icon,
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .inline-icon {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     margin-right: 0px;
     vertical-align: bottom;
     position: relative;
@@ -97,6 +108,7 @@
 /* Summary */
 
 .MMM-OpenWeatherMapForecast .summary {
+    font-size: 40px;
     margin: 15px 0;
 }
 
@@ -104,6 +116,7 @@
 /* Forecast Header */
 
 .MMM-OpenWeatherMapForecast .module-header.forecast-header {
+    font-size: 32px;
     margin-top: 20px;
     margin-bottom: 0;
 }
@@ -126,6 +139,7 @@
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.with-forecast-header.tiled .forecast-container {
+    font-size: 32px;
     border-top: none;
 }
 
@@ -161,7 +175,7 @@
 
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .time,
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .day-name {
-    font-size: 17px;
+    font-size: 40px;
     text-transform: uppercase;
 }
 
@@ -177,14 +191,14 @@
 
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .temperature,
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .temperature-container {
-    font-size: 22px;
+    font-size: 40px;
     padding: 4px 0;
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .precipitation-container,
 .MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .wind-container {
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 40px;
+    line-height: 1.25;
 }
 
 
@@ -194,7 +208,7 @@
     display: table;
     border-collapse: collapse;
     width: 100%;
-    font-size: 17px;
+    font-size: 40px;
     line-height: 1;
     border-bottom: solid 1px #222;
 }
@@ -218,15 +232,15 @@
 .MMM-OpenWeatherMapForecast .wrapper.table .forecast-container .forecast-item>span,
 .MMM-OpenWeatherMapForecast .wrapper.table .forecast-container .header-row>span {
     display: table-cell;
-    font-size: 17px;
+    font-size: 40px;
     text-align: center;
     vertical-align: middle;
     height: 40px;
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.table .forecast-container .header-row>span {
-    height: 32px;
-    font-size: 14px;
+    height: 40px;
+    font-size: 40px;
     text-transform: uppercase;
     vertical-align: bottom;
     padding-bottom: 2px;
@@ -241,8 +255,8 @@
 }
 
 .MMM-OpenWeatherMapForecast .wrapper.table .forecast-container .forecast-item .forecast-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: block;
     vertical-align: middle;
 }
